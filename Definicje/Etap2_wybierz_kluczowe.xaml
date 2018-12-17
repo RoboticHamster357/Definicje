@@ -63,6 +63,7 @@
         <Button x:Name="button32" Grid.Row="7" Grid.Column="2" Visibility="Hidden" Click="Button32_Click"/>
         <Button x:Name="button33" Grid.Row="7" Grid.Column="3" Visibility="Hidden" Click="Button33_Click"/>
         <Button x:Name="button34" Grid.Row="7" Grid.Column="4" Visibility="Hidden" Click="Button34_Click"/>
+        <TextBox x:Name="tbkluczowe" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" Margin="15"/>
 
     </Grid>
 </Window>
