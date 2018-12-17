@@ -1,0 +1,68 @@
+﻿<Window x:Class="Definicje.Etap2_wybierz_kluczowe"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Definicje"
+        mc:Ignorable="d"
+        Title="Etap2_wybierz_kluczowe" Height="450" Width="800"
+        WindowState="Maximized">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="BWybierz" Content="Wybierz" Grid.Row="8" Grid.Column="4" 
+                Height="40" Width="110" Click="BWybierz_Click"/>
+        <Button x:Name="button0" Grid.Row="1" Grid.Column="0" Visibility="Hidden" Click="Button0_Click"/>
+        <Button x:Name="button1" Grid.Row="1" Grid.Column="1" Visibility="Hidden" Click="Button1_Click"/>
+        <Button x:Name="button2" Grid.Row="1" Grid.Column="2" Visibility="Hidden" Click="Button2_Click"/>
+        <Button x:Name="button3" Grid.Row="1" Grid.Column="3" Visibility="Hidden" Click="Button3_Click"/>
+        <Button x:Name="button4" Grid.Row="1" Grid.Column="4" Visibility="Hidden" Click="Button4_Click"/>
+        <Button x:Name="button5" Grid.Row="2" Grid.Column="0" Visibility="Hidden" Click="Button5_Click"/>
+        <Button x:Name="button6" Grid.Row="2" Grid.Column="1" Visibility="Hidden" Click="Button6_Click"/>
+        <Button x:Name="button7" Grid.Row="2" Grid.Column="2" Visibility="Hidden" Click="Button7_Click"/>
+        <Button x:Name="button8" Grid.Row="2" Grid.Column="3" Visibility="Hidden" Click="Button8_Click"/>
+        <Button x:Name="button9" Grid.Row="2" Grid.Column="4" Visibility="Hidden" Click="Button9_Click"/>
+        <Button x:Name="button10" Grid.Row="3" Grid.Column="0" Visibility="Hidden" Click="Button10_Click"/>
+        <Button x:Name="button11" Grid.Row="3" Grid.Column="1" Visibility="Hidden" Click="Button11_Click"/>
+        <Button x:Name="button12" Grid.Row="3" Grid.Column="2" Visibility="Hidden" Click="Button12_Click"/>
+        <Button x:Name="button13" Grid.Row="3" Grid.Column="3" Visibility="Hidden" Click="Button13_Click"/>
+        <Button x:Name="button14" Grid.Row="3" Grid.Column="4" Visibility="Hidden" Click="Button14_Click"/>
+        <Button x:Name="button15" Grid.Row="4" Grid.Column="0" Visibility="Hidden" Click="Button15_Click"/>
+        <Button x:Name="button16" Grid.Row="4" Grid.Column="1" Visibility="Hidden" Click="Button16_Click"/>
+        <Button x:Name="button17" Grid.Row="4" Grid.Column="2" Visibility="Hidden" Click="Button17_Click"/>
+        <Button x:Name="button18" Grid.Row="4" Grid.Column="3" Visibility="Hidden" Click="Button18_Click"/>
+        <Button x:Name="button19" Grid.Row="4" Grid.Column="4" Visibility="Hidden" Click="Button19_Click"/>
+        <Button x:Name="button20" Grid.Row="5" Grid.Column="0" Visibility="Hidden" Click="Button20_Click"/>
+        <Button x:Name="button21" Grid.Row="5" Grid.Column="1" Visibility="Hidden" Click="Button21_Click"/>
+        <Button x:Name="button22" Grid.Row="5" Grid.Column="2" Visibility="Hidden" Click="Button22_Click"/>
+        <Button x:Name="button23" Grid.Row="5" Grid.Column="3" Visibility="Hidden" Click="Button23_Click"/>
+        <Button x:Name="button24" Grid.Row="5" Grid.Column="4" Visibility="Hidden" Click="Button24_Click"/>
+        <Button x:Name="button25" Grid.Row="6" Grid.Column="0" Visibility="Hidden" Click="Button25_Click"/>
+        <Button x:Name="button26" Grid.Row="6" Grid.Column="1" Visibility="Hidden" Click="Button26_Click"/>
+        <Button x:Name="button27" Grid.Row="6" Grid.Column="2" Visibility="Hidden" Click="Button27_Click"/>
+        <Button x:Name="button28" Grid.Row="6" Grid.Column="3" Visibility="Hidden" Click="Button28_Click"/>
+        <Button x:Name="button29" Grid.Row="6" Grid.Column="4" Visibility="Hidden" Click="Button29_Click"/>
+        <Button x:Name="button30" Grid.Row="7" Grid.Column="0" Visibility="Hidden" Click="Button30_Click"/>
+        <Button x:Name="button31" Grid.Row="7" Grid.Column="1" Visibility="Hidden" Click="Button31_Click"/>
+        <Button x:Name="button32" Grid.Row="7" Grid.Column="2" Visibility="Hidden" Click="Button32_Click"/>
+        <Button x:Name="button33" Grid.Row="7" Grid.Column="3" Visibility="Hidden" Click="Button33_Click"/>
+        <Button x:Name="button34" Grid.Row="7" Grid.Column="4" Visibility="Hidden" Click="Button34_Click"/>
+
+    </Grid>
+</Window>
