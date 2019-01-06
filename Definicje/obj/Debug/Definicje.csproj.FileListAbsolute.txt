@@ -117,3 +117,12 @@ C:\Users\marta\OneDrive\Pulpit\Projekty\OI\GUI_OI\Definicje\Definicje\obj\Debug\
 C:\Users\marta\OneDrive\Pulpit\Projekty\OI\GUI_OI\Definicje\Definicje\obj\Debug\Definicje.pdb
 C:\Users\marta\OneDrive\Pulpit\Projekty\OI\GUI_OI\Definicje\Definicje\obj\Debug\Etap2_wybierz_kluczowe.g.cs
 C:\Users\marta\OneDrive\Pulpit\Projekty\OI\GUI_OI\Definicje\Definicje\obj\Debug\Etap2_wybierz_kluczowe.baml
+C:\Users\marta\OneDrive\Pulpit\Projekty\OI\GUI_OI\Definicje\Definicje\obj\Debug\Etap3_wypisz_skojarzenia.g.cs
+C:\Users\marta\OneDrive\Pulpit\Projekty\OI\GUI_OI\Definicje\Definicje\obj\Debug\Etap3_wypisz_skojarzenia.baml
+C:\Users\marta\OneDrive\Pulpit\Projekty\OI\GUI_OI\Definicje\Definicje\bin\Debug\MaterialDesignColors.dll
+C:\Users\marta\OneDrive\Pulpit\Projekty\OI\GUI_OI\Definicje\Definicje\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\marta\OneDrive\Pulpit\Projekty\OI\GUI_OI\Definicje\Definicje\bin\Debug\MaterialDesignColors.pdb
+C:\Users\marta\OneDrive\Pulpit\Projekty\OI\GUI_OI\Definicje\Definicje\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\marta\OneDrive\Pulpit\Projekty\OI\GUI_OI\Definicje\Definicje\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\marta\OneDrive\Pulpit\Projekty\OI\GUI_OI\Definicje\Definicje\obj\Debug\App.baml
+C:\Users\marta\OneDrive\Pulpit\Projekty\OI\GUI_OI\Definicje\Definicje\obj\Debug\Definicje.csproj.CopyComplete

@@ -20,7 +20,8 @@ namespace Definicje
     {
         string[] tablicaSlow;
         TextBox[] textBoxes = new TextBox[35];
-        
+        string[] tab;
+        string poprawionaDef;
 
         public Etap2_kluczowe()
         {
@@ -33,12 +34,16 @@ namespace Definicje
             StreamReader czytacz1 = new StreamReader("slowaKluczowe.txt");
             string slowaKluczowe = czytacz1.ReadToEnd();
             czytacz1.Close();
-            tbPodpowiedz.Text = slowaKluczowe;
+            string[] tabKluczowych = slowaKluczowe.Split('~');
+            for (int i = 0; i < tabKluczowych.Length; i++)
+            {
+                tbPodpowiedz.Text += tabKluczowych[i]+=" ";
+            }
 
             StreamReader czytacz = new StreamReader("uzywanaDefinicja.txt");
             string wyswietlanaDef = czytacz.ReadToEnd();
             czytacz.Close();
-            string[] tab;
+
             tab = wyswietlanaDef.Split('~');
 
 
@@ -56,6 +61,7 @@ namespace Definicje
                     if (licznik < tablicaSlow.Length)
                     {
                         textBoxes[licznik].Visibility = Visibility.Visible;
+                        textBoxes[licznik].Background = Brushes.Lavender;
                         licznik++;
                     }
                 }
@@ -70,6 +76,7 @@ namespace Definicje
             int niepoprawne = 0;
             string gratulacje;
             int[] czyRowne = new int[tablicaSlow.Length];
+            string[] tablicaSlow1 = tab[1].Split(' ');
             for (int i = 0; i < tablicaSlow.Length; i++)
             {
                 czyRowne[i] = string.Compare(tablicaSlow[i], textBoxes[i].Text, true);
@@ -79,6 +86,7 @@ namespace Definicje
                 }
                 else
                 {
+                    tablicaSlow1[i] += "#";
                     niepoprawne++;
                 }
             }
@@ -90,20 +98,25 @@ namespace Definicje
             {
                 gratulacje = "Niestety nie udało ci się uzupełnić poprawnie :(";
             }
+
+            for (int i = 0; i < tablicaSlow1.Length; i++)
+            {
+                poprawionaDef += tablicaSlow1[i] + " ";
+            }
+
             StreamWriter zapisywacz = new StreamWriter("czyPoprawne.txt");
             zapisywacz.Write(poprawne + "~" + niepoprawne + "~" + gratulacje);
             zapisywacz.Close();
+
+            StreamWriter zapisywacz1 = new StreamWriter("poprawionaDef.txt");
+            zapisywacz1.Write(poprawionaDef);
+            zapisywacz1.Close();
+
             Etap2_sprawdzenie wnd = new Etap2_sprawdzenie();
             this.Close();
             wnd.Show();
         }
 
 
-        //private void TbDefinicjaUzytkownika_GotFocus(object sender, RoutedEventArgs e)
-        //{
-        //    TextBox tb = (TextBox)sender;
-        //    tb.Text = string.Empty;
-        //    tb.GotFocus -=TbDefinicjaUzytkownika_GotFocus;
-        //}
     }
 }

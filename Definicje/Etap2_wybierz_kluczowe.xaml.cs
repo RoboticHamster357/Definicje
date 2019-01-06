@@ -21,7 +21,7 @@ namespace Definicje
     public partial class Etap2_wybierz_kluczowe : Window
     {
         int ileSlow=0;
-        int maxSlow = 3;
+        int maxSlow = 0;
         string[] tablicaSlow;
         Button[] buttons=new Button[35];
 
@@ -30,8 +30,8 @@ namespace Definicje
             InitializeComponent();
             buttons[0] = button0; buttons[1] = button1; buttons[2] = button2; buttons[3] = button3; buttons[4] = button4; buttons[5] = button5; buttons[6] = button6; buttons[7] = button7; buttons[8] = button8; buttons[9] = button9; buttons[10] = button10;
             buttons[11] = button11; buttons[12] = button12; buttons[13] = button13; buttons[14] = button14; buttons[15] = button15; buttons[16] = button16; buttons[17] = button17; buttons[18] = button18; buttons[19] = button19; buttons[20] = button20; buttons[21] = button21;
-            buttons[22] = button22; buttons[23] = button23; buttons[24] = button24; buttons[25] = button25; buttons[26] = button26; buttons[27] = button7; buttons[28] = button28; buttons[29] = button29; buttons[30] = button30; buttons[31] = button31; buttons[32] = button32;
-            buttons[33] = button11; buttons[34] = button34;
+            buttons[22] = button22; buttons[23] = button23; buttons[24] = button24; buttons[25] = button25; buttons[26] = button26; buttons[27] = button27; buttons[28] = button28; buttons[29] = button29; buttons[30] = button30; buttons[31] = button31; buttons[32] = button32;
+            buttons[33] = button33; buttons[34] = button34;
 
             StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt");
             zapisywacz.Write("");
@@ -44,6 +44,8 @@ namespace Definicje
 
 
             tablicaSlow = tab[1].Split(' ');
+            maxSlow = tablicaSlow.Length / 4;
+
             int licznik = 0;
             for (int i = 0; i < 5; i++)
             {
@@ -79,7 +81,7 @@ namespace Definicje
                 zapisywacz.Write(button0.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button0.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button0.Content + " ";
             }
             else
             {
@@ -95,7 +97,7 @@ namespace Definicje
                 zapisywacz.Write(button1.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button1.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button1.Content + " ";
             }
             else
             {
@@ -111,7 +113,7 @@ namespace Definicje
                 zapisywacz.Write(button2.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button2.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button2.Content + " ";
             }
             else
             {
@@ -127,7 +129,7 @@ namespace Definicje
                 zapisywacz.Write(button3.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button3.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button3.Content + " ";
             }
             else
             {
@@ -143,7 +145,7 @@ namespace Definicje
                 zapisywacz.Write(button4.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button4.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button4.Content + " ";
             }
             else
             {
@@ -159,7 +161,7 @@ namespace Definicje
                 zapisywacz.Write(button5.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button5.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button5.Content + " ";
             }
             else
             {
@@ -175,7 +177,7 @@ namespace Definicje
                 zapisywacz.Write(button6.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button6.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button6.Content + " ";
             }
             else
             {
@@ -191,7 +193,7 @@ namespace Definicje
                 zapisywacz.Write(button7.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button7.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button7.Content + " ";
             }
             else
             {
@@ -207,7 +209,7 @@ namespace Definicje
                 zapisywacz.Write(button8.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button8.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button8.Content + " ";
             }
             else
             {
@@ -223,7 +225,7 @@ namespace Definicje
                 zapisywacz.Write(button9.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button9.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button9.Content + " ";
             }
             else
             {
@@ -239,7 +241,7 @@ namespace Definicje
                 zapisywacz.Write(button10.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button10.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button10.Content + " ";
             }
             else
             {
@@ -255,7 +257,7 @@ namespace Definicje
                 zapisywacz.Write(button11.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button11.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button11.Content + " ";
             }
             else
             {
@@ -271,7 +273,7 @@ namespace Definicje
                 zapisywacz.Write(button12.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button12.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button12.Content + " ";
             }
             else
             {
@@ -287,7 +289,7 @@ namespace Definicje
                 zapisywacz.Write(button13.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button13.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button13.Content + " ";
             }
             else
             {
@@ -303,7 +305,7 @@ namespace Definicje
                 zapisywacz.Write(button14.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button14.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button14.Content + " ";
             }
             else
             {
@@ -319,7 +321,7 @@ namespace Definicje
                 zapisywacz.Write(button15.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button15.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button15.Content + " ";
             }
             else
             {
@@ -335,7 +337,7 @@ namespace Definicje
                 zapisywacz.Write(button16.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button16.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button16.Content + " ";
             }
             else
             {
@@ -351,7 +353,7 @@ namespace Definicje
                 zapisywacz.Write(button17.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button17.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button17.Content + " ";
             }
             else
             {
@@ -367,7 +369,7 @@ namespace Definicje
                 zapisywacz.Write(button18.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button18.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button18.Content + " ";
             }
             else
             {
@@ -383,7 +385,7 @@ namespace Definicje
                 zapisywacz.Write(button19.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button19.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button19.Content + " ";
             }
             else
             {
@@ -399,7 +401,7 @@ namespace Definicje
                 zapisywacz.Write(button20.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button20.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button20.Content + " ";
             }
             else
             {
@@ -415,7 +417,7 @@ namespace Definicje
                 zapisywacz.Write(button21.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button21.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button21.Content + " ";
             }
             else
             {
@@ -431,7 +433,7 @@ namespace Definicje
                 zapisywacz.Write(button22.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button22.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button22.Content + " ";
             }
             else
             {
@@ -447,7 +449,7 @@ namespace Definicje
                 zapisywacz.Write(button23.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button23.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button23.Content + " ";
             }
             else
             {
@@ -463,7 +465,7 @@ namespace Definicje
                 zapisywacz.Write(button24.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button24.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button24.Content + " ";
             }
             else
             {
@@ -479,7 +481,7 @@ namespace Definicje
                 zapisywacz.Write(button25.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button25.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button25.Content + " ";
             }
             else
             {
@@ -495,7 +497,7 @@ namespace Definicje
                 zapisywacz.Write(button26.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button26.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button26.Content + " ";
             }
             else
             {
@@ -511,7 +513,7 @@ namespace Definicje
                 zapisywacz.Write(button27.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button27.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button27.Content + " ";
             }
             else
             {
@@ -527,7 +529,7 @@ namespace Definicje
                 zapisywacz.Write(button28.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button28.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button28.Content + " ";
             }
             else
             {
@@ -543,7 +545,7 @@ namespace Definicje
                 zapisywacz.Write(button29.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button29.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button29.Content + " ";
             }
             else
             {
@@ -559,7 +561,7 @@ namespace Definicje
                 zapisywacz.Write(button30.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button30.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button30.Content + " ";
             }
             else
             {
@@ -575,7 +577,7 @@ namespace Definicje
                 zapisywacz.Write(button31.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button31.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button31.Content + " ";
             }
             else
             {
@@ -591,7 +593,7 @@ namespace Definicje
                 zapisywacz.Write(button32.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button32.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button32.Content + " ";
             }
             else
             {
@@ -607,7 +609,7 @@ namespace Definicje
                 zapisywacz.Write(button33.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button33.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button33.Content + " ";
             }
             else
             {
@@ -623,7 +625,7 @@ namespace Definicje
                 zapisywacz.Write(button34.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button34.Content + ", ";
+                tbkluczowe.Text = tbkluczowe.Text + button34.Content + " ";
             }
             else
             {

@@ -23,7 +23,13 @@ namespace Definicje
         public MainWindow()
         {
             InitializeComponent();
-
+            TBPowitanie.Text = "Witaj!\nSkoro tu trafiłeś to znaczy, że chciałbyś nauczyć się czegoś nowego. Nauka na pamięć nie jest łatwa. " +
+                "Ludzie często czytają tekst w kółko i mimo wielokrotnego powtarzania przynosi to marne efekty. " +
+                "Korzystając z tej aplikacji najważniejsze jest to, że zamiast czytać tekst sam próbujesz go sobie przypomnieć. " +
+                "Bądź dla siebie wyrozumiały, nie wszystkiego da się nauczyć od razu. " +
+                "Kiedy przejdziesz dalej będziesz mógł dodać definicję, której chcesz się nauczyć lub wybrać jedną z już dodanych. " +
+                "Nie oszukuj i nie pomagaj sobie zaglądając do treści definicji już podczas realizowania jednego z etapów. " +
+                "Powodzenia!";
         }
 
      

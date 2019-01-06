@@ -19,9 +19,9 @@
             <RowDefinition Height="6*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <TextBox x:Name="TBgratulacje" Text="Gratuluję/Przykro mi" IsReadOnly="True" Margin="10" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" />
-        <TextBox x:Name="tbPoprawiona" IsReadOnly="True" Margin="10" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1"/>
-        <Button x:Name="BJeszcze_raz3" Content="Spróbuj jeszcze raz" Grid.Column="2" Grid.Row="2" Height="40" Width="110" Click="BJeszcze_raz3_Click"/>
+        <TextBox x:Name="TBgratulacje" Text="Gratuluję/Przykro mi" IsReadOnly="True" Margin="10" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" FontSize="20"/>
+        <RichTextBox x:Name="tbPoprawiona" IsReadOnly="True" Margin="10" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" FontSize="20"/>
+        <Button x:Name="BJeszcze_raz3" Content="Jeszcze raz" Grid.Column="2" Grid.Row="2" Height="40" Width="110" Click="BJeszcze_raz3_Click"/>
         <Button x:Name="BDalej3" Content="Dalej" Grid.Column="3" Grid.Row="2" Height="40" Width="110" Click="BDalej3_Click"/>
 
     </Grid>

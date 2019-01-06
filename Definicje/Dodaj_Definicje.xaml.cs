@@ -27,13 +27,21 @@ namespace Definicje
 
         private void BDodaj_Definicje2_Click(object sender, RoutedEventArgs e)
         {
-            StreamWriter pisacz = new StreamWriter("definicje.txt",true);
-            string tekst = TBCo_Definiujesz.Text + "~" + TBTresc_Definicji.Text+"|";
-            pisacz.Write(tekst);
-            pisacz.Close();
-            Lista_definicji wnd = new Lista_definicji();
-            this.Close();
-            wnd.Show();
+            string[] tablicaSlow = TBTresc_Definicji.Text.Split(' ');
+            if (tablicaSlow.Length <= 35)
+            {
+                StreamWriter pisacz = new StreamWriter("definicje.txt", true);
+                string tekst = TBCo_Definiujesz.Text + "~" + TBTresc_Definicji.Text + "|";
+                pisacz.Write(tekst);
+                pisacz.Close();
+                Lista_definicji wnd = new Lista_definicji();
+                this.Close();
+                wnd.Show();
+            }
+            else
+            {
+                MessageBox.Show("Definicja może składać się z maksymalnie 34 słów.");
+            }
         }
 
         private void TBCo_Definiujesz_TextChanged(object sender, TextChangedEventArgs e)
@@ -44,6 +52,27 @@ namespace Definicje
         private void TBTresc_Definicji_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void TBCo_Definiujesz_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            tb.Text = string.Empty;
+            tb.GotFocus -= TBCo_Definiujesz_GotFocus;
+        }
+
+        private void TBTresc_Definicji_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            tb.Text = string.Empty;
+            tb.GotFocus -= TBTresc_Definicji_GotFocus;
+        }
+
+        private void BAnuluj_Dodawanie_Click(object sender, RoutedEventArgs e)
+        {
+            Lista_definicji wnd = new Lista_definicji();
+            this.Close();
+            wnd.Show();
         }
     }
 }

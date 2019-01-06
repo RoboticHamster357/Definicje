@@ -6,10 +6,19 @@
         xmlns:local="clr-namespace:Definicje"
         mc:Ignorable="d"
         WindowState="Maximized"
-        Title="MainWindow" Background="White">
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="MainWindow" >
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
@@ -18,8 +27,7 @@
             <RowDefinition Height="9*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <Image x:Name="IPowitanie" Margin="10" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" />
-        <Button x:Name="BDalej" Content="Dalej" Click="BDalej_Click" Height="40" Width="110" Grid.Row="1" Grid.Column="3"/>
-
+        <Button x:Name="BDalej" Content="Dalej" Click="BDalej_Click" Height="40" Width="110" Grid.Row="1" Grid.Column="4"/>
+        <TextBox x:Name="TBPowitanie" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="3" IsReadOnly="True" TextWrapping="Wrap" AcceptsReturn="True" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
     </Grid>
 </Window>

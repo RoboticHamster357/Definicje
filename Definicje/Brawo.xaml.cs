@@ -22,6 +22,8 @@ namespace Definicje
         public Brawo()
         {
             InitializeComponent();
+            TBGratulacje.Text = "Gratuluję!\n" +
+                "Udało ci się ukończyć wszystkie etapy. ";
         }
 
         private void BZakoncz_Click(object sender, RoutedEventArgs e)

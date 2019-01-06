@@ -20,9 +20,9 @@
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Label x:Name="LDodaj_Definicje" Content="Dodaj definicję" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0"/>
-        <TextBox x:Name="TBCo_Definiujesz" Text="Co chcesz zdefiniować?" Margin="10" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" TextChanged="TBCo_Definiujesz_TextChanged"/>
-        <TextBox x:Name="TBTresc_Definicji" Text="Podaj treść definicji" Margin="10" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="2" TextChanged="TBTresc_Definicji_TextChanged"/>
+        <TextBox x:Name="TBCo_Definiujesz" Text="Co chcesz zdefiniować?" Margin="10" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" TextChanged="TBCo_Definiujesz_TextChanged" GotFocus="TBCo_Definiujesz_GotFocus" FontSize="20" VerticalAlignment="Center"/>
+        <TextBox x:Name="TBTresc_Definicji" Text="Podaj treść definicji" Margin="10" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="2" TextChanged="TBTresc_Definicji_TextChanged" GotFocus="TBTresc_Definicji_GotFocus" FontSize="20" VerticalAlignment="Center"/>
         <Button x:Name="BDodaj_Definicje2" Content="Dodaj" Click="BDodaj_Definicje2_Click" Grid.Column="3" Grid.Row="3" Height="40" Width="110"/>
-
+        <Button x:Name="BAnuluj_Dodawanie" Content="Anuluj" Grid.Column="2" Grid.Row="3" Height="40" Width="110" Click="BAnuluj_Dodawanie_Click"/>
     </Grid>
 </Window>

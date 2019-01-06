@@ -29,11 +29,14 @@ namespace Definicje
             string[] tab;
             tab = wyswietlanaDef.Split('~');
             TBdefinicja.Text += tab[0].ToString() + "\n" + tab[1].ToString();
+            TBinstrukcja.Text = "W trzecim etapie masz za zadanie skorzystać ze swojej kreatywności. " +
+                "Wymyśl kilka skojarzeń związanych z definicją. Daj się ponieść fantazji, im mniej oczywiste i bardziej zwariowane tym lepiej. " +
+                "Na podstawie wyświetlanych skojarzeń spróbuj odtworzyć definicję. Daj z siebie wszystko, powodzenia! ";
         }
 
         private void BDalej3_Click(object sender, RoutedEventArgs e)
         {
-            Etap3_skojarzenie wnd = new Etap3_skojarzenie();
+            Etap3_wypisz_skojarzenia wnd = new Etap3_wypisz_skojarzenia();
             this.Close();
             wnd.Show();
         }

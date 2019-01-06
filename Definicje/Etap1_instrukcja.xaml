@@ -8,21 +8,22 @@
         Title="Etap1_instrukcja" WindowState="Maximized">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="3*"/>
+            <RowDefinition/>
+            <RowDefinition Height="137.6"/>
             <RowDefinition Height="5*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <TextBox x:Name="TBDefinicja" IsReadOnly="True" Margin="10" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" TextChanged="TBInstrukcja_TextChanged"/>
-        <TextBox x:Name="TBInstrukcja" IsReadOnly="True" Margin="10" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="2"/>
-        <Label x:Name="LEtap1" Content="Etap1" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0"/>
-        <Button x:Name="BRozpocznij1" Content="Rozpocznij" Click="BRozpocznij1_Click" Grid.Column="3" Grid.Row="3" Height="40" Width="110"/>
+        <TextBox x:Name="TBDefinicja" IsReadOnly="True" TextWrapping="Wrap" AcceptsReturn="True" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" TextChanged="TBInstrukcja_TextChanged" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox x:Name="TBInstrukcja" IsReadOnly="True" TextWrapping="Wrap" AcceptsReturn="True" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="2" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox x:Name="TBEtap1" Text="Etap 1" IsReadOnly="True"  HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Grid.Row="0" FontSize="20"/>
+        <Button x:Name="BRozpocznij1" Content="Rozpocznij" Click="BRozpocznij1_Click" Grid.Column="4" Grid.Row="3" Height="40" Width="110"/>
 
     </Grid>
 </Window>
