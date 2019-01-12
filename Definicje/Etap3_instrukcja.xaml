@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Definicje"
         mc:Ignorable="d"
-        Title="Etap3_instrukcja" WindowState="Maximized">
+        Title="Zapamiętaj definicję" WindowState="Maximized">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>

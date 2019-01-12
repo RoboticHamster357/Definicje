@@ -31,7 +31,7 @@ namespace Definicje
             string[] tab;
             tab = wyswietlanaDef.Split('~');
             TBDefinicja.Text += tab[0].ToString() + "\n" + tab[1].ToString();
-            TBInstrukcja.Text = "W pierwszym etapie uzupełnij brakujące słowa w wybranej przez ciebie definicji. Najpierw dokładnie przeczyataj wyświetloną definicję. " +
+            TBInstrukcja.Text = "W pierwszym etapie uzupełnij brakujące słowa w wybranej przez ciebie definicji. Najpierw dokładnie przeczytaj wyświetloną definicję. " +
                 "Kiedy uznasz, że jesteś gotowy rozpocznij pierwszy etap. Jeżeli nie uda ci się za pierwszym razem, nie martw się. Możesz spróbować jeszcze raz. " +
                 "Jeżeli uważasz, że jesteś gotowy przejść dalej możesz to zrobić nawet jeżeli nie udało ci się bezbłędnie uzupełnić definicji. Powodzenia!";
         }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Definicje"
         mc:Ignorable="d"
-        Title="Etap2_kluczowe" WindowState="Maximized">
+        Title="Zapamiętaj definicję" WindowState="Maximized">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -26,7 +26,6 @@
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Button x:Name="BSprawdz2" Content="Sprawdź" Height="40" Width="110" Grid.Row="8" Grid.Column="4" Click="BSprawdz2_Click"/>
-        <TextBox x:Name="tbPodpowiedz" Grid.Column="0" Margin="15" Grid.ColumnSpan="5" Grid.Row="0" IsReadOnly="True"/>
         <TextBox x:Name="textBox0" Grid.Row="1" Grid.Column="0" Visibility="Hidden" Margin="5" FontSize="20"/>
         <TextBox x:Name="textBox1" Grid.Row="1" Grid.Column="1" Visibility="Hidden" Margin="5" FontSize="20"/>
         <TextBox x:Name="textBox2" Grid.Row="1" Grid.Column="2" Visibility="Hidden" Margin="5" FontSize="20"/>

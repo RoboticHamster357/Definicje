@@ -35,10 +35,6 @@ namespace Definicje
             string slowaKluczowe = czytacz1.ReadToEnd();
             czytacz1.Close();
             string[] tabKluczowych = slowaKluczowe.Split('~');
-            for (int i = 0; i < tabKluczowych.Length; i++)
-            {
-                tbPodpowiedz.Text += tabKluczowych[i]+=" ";
-            }
 
             StreamReader czytacz = new StreamReader("uzywanaDefinicja.txt");
             string wyswietlanaDef = czytacz.ReadToEnd();
@@ -48,11 +44,23 @@ namespace Definicje
 
 
             tablicaSlow = tab[1].Split(' ');
+            int czyKluczowe = 0;
             for (int i = 0; i < tablicaSlow.Length; i++)
             {
                 tablicaSlow[i] = tablicaSlow[i].Trim('.', ',', '(', ')', '[', ']', '{', '}', '-', ';', ':', ' ');
             }
-
+            for (int i = 0; i < tablicaSlow.Length; i++)
+            {
+                for (int j = 0; j < tabKluczowych.Length; j++)
+                {
+                    czyKluczowe = string.Compare(tablicaSlow[i], tabKluczowych[j], true);
+                    if(czyKluczowe==0)
+                    {
+                        textBoxes[i].Text = tabKluczowych[j];
+                        textBoxes[i].IsReadOnly = true;
+                    }
+                }
+            }
             int licznik = 0;
             for (int i = 0; i < 5; i++)
             {

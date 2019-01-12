@@ -14,7 +14,7 @@
      TextOptions.TextRenderingMode="Auto"
      Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="MainWindow" >
+        Title="Zapamiętaj definicję" >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -24,10 +24,12 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="9*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="5*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="BDalej" Content="Dalej" Click="BDalej_Click" Height="40" Width="110" Grid.Row="1" Grid.Column="4"/>
-        <TextBox x:Name="TBPowitanie" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="3" IsReadOnly="True" TextWrapping="Wrap" AcceptsReturn="True" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Button x:Name="BDalej" Content="Dalej" Click="BDalej_Click" Height="40" Width="110" Grid.Row="2" Grid.Column="4"/>
+        <TextBox x:Name="NazwaAplikacji" Text="Zapamiętaj definicję" Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="0" IsReadOnly="True" TextWrapping="Wrap" AcceptsReturn="True" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"/> 
+        <TextBox x:Name="TBPowitanie" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" IsReadOnly="True" TextWrapping="Wrap" AcceptsReturn="True" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
     </Grid>
 </Window>

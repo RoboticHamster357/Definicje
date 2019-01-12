@@ -22,6 +22,7 @@ namespace Definicje
     {
         int ileSlow=0;
         int maxSlow = 0;
+        int pozostaleSlowa=0;
         string[] tablicaSlow;
         Button[] buttons=new Button[35];
 
@@ -45,6 +46,8 @@ namespace Definicje
 
             tablicaSlow = tab[1].Split(' ');
             maxSlow = tablicaSlow.Length / 4;
+            pozostaleSlowa = maxSlow;
+            tbkluczowe.Text = "Pozostała ilość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
 
             int licznik = 0;
             for (int i = 0; i < 5; i++)
@@ -64,6 +67,8 @@ namespace Definicje
                 tablicaSlow[i] = tablicaSlow[i].Trim('.', ',', '(', ')', '[', ']', '{', '}', '-', ';', ':', ' ');
             }
         }
+        
+        
 
         private void BWybierz_Click(object sender, RoutedEventArgs e)
         {
@@ -75,562 +80,632 @@ namespace Definicje
         private void Button0_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa--;
             if(ileSlow<=maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt",true);
                 zapisywacz.Write(button0.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button0.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: "+pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button0.Background = Brushes.Red;
         }
         private void Button1_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa--;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button1.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button1.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button1.Background = Brushes.Red;
         }
         private void Button2_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button2.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button2.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button2.Background = Brushes.Red;
         }
         private void Button3_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button3.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button3.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button3.Background = Brushes.Red;
         }
         private void Button4_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button4.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button4.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button4.Background = Brushes.Red;
         }
         private void Button5_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button5.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button5.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button5.Background = Brushes.Red;
         }
         private void Button6_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button6.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button6.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button6.Background = Brushes.Red;
         }
         private void Button7_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button7.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button7.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button7.Background = Brushes.Red;
         }
         private void Button8_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button8.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button8.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button8.Background = Brushes.Red;
         }
         private void Button9_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button9.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button9.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button9.Background = Brushes.Red;
         }
         private void Button10_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button10.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button10.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button10.Background = Brushes.Red;
         }
         private void Button11_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button11.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button11.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button11.Background = Brushes.Red;
         }
         private void Button12_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button12.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button12.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button12.Background = Brushes.Red;
         }
         private void Button13_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button13.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button13.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button13.Background = Brushes.Red;
         }
         private void Button14_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button14.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button14.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button14.Background = Brushes.Red;
         }
         private void Button15_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button15.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button15.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button15.Background = Brushes.Red;
         }
         private void Button16_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button16.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button16.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button16.Background = Brushes.Red;
         }
         private void Button17_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button17.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button17.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button17.Background = Brushes.Red;
         }
         private void Button18_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button18.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button18.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button18.Background = Brushes.Red;
         }
         private void Button19_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button19.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button19.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button19.Background = Brushes.Red;
         }
         private void Button20_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button20.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button20.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button20.Background = Brushes.Red;
         }
         private void Button21_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button21.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button21.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button21.Background = Brushes.Red;
         }
         private void Button22_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button22.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button22.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button22.Background = Brushes.Red;
         }
         private void Button23_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button23.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button23.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button23.Background = Brushes.Red;
         }
         private void Button24_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button24.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button24.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button24.Background = Brushes.Red;
         }
         private void Button25_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button25.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button25.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button25.Background = Brushes.Red;
         }
         private void Button26_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button26.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button26.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button26.Background = Brushes.Red;
         }
         private void Button27_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button27.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button27.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button28.Background = Brushes.Red;
         }
         private void Button28_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button28.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button28.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button28.Background = Brushes.Red;
         }
         private void Button29_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button29.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button29.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button29.Background = Brushes.Red;
         }
         private void Button30_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button30.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button30.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button30.Background = Brushes.Red;
         }
         private void Button31_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button31.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button31.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button31.Background = Brushes.Red;
         }
         private void Button32_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button32.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button32.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button32.Background = Brushes.Red;
         }
         private void Button33_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button33.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button33.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button33.Background = Brushes.Red;
         }
         private void Button34_Click(object sender, RoutedEventArgs e)
         {
             ileSlow++;
+            pozostaleSlowa = maxSlow - ileSlow;
             if (ileSlow <= maxSlow)
             {
                 StreamWriter zapisywacz = new StreamWriter("slowaKluczowe.txt", true);
                 zapisywacz.Write(button34.Content.ToString());
                 zapisywacz.Write("~");
                 zapisywacz.Close();
-                tbkluczowe.Text = tbkluczowe.Text + button34.Content + " ";
+                tbkluczowe.Text = "Pozostała lość słów kluczowych do wybrania: " + pozostaleSlowa.ToString();
             }
             else
             {
                 MessageBox.Show("Wybrano już wszystkie słowa kluczowe");
             }
+            button34.Background = Brushes.Red;
         }
 
         }
